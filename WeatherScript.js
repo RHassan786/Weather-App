@@ -193,11 +193,12 @@ output.addEventListener("click",async (event)=>{
     weekly.classList.remove("weeklyError");
     weekly.classList.remove("resultWeekly");
 
-   weekly.classList.add("loadingState");
-    weekly.innerHTML=`<div class="weeklyLoading "> Loading...  </div>`
-    event.target.disabled=true;
+  
     if(event.target===document.getElementById("WeeklyBtn"))
     {
+         weekly.classList.add("loadingState");
+    weekly.innerHTML=`<div class="weeklyLoading "> Loading...  </div>`
+    event.target.disabled=true;
         
       try{
         console.log("Entered Weekly Try")
